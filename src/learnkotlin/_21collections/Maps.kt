@@ -45,7 +45,4 @@ fun main(args: Array<String>) {
     // in this package. We do get them with data classes though!
     val car = Car("orange", "240z", 1970)
     val (color, model, year) = car
-
-
-
 }

@@ -25,13 +25,12 @@ fun main(args: Array<String>) {
         println(i)
         if (i == 2) break@iLoop
         for (j in 11..20) {
-             println(j)
+            println(j)
             for (k in 100 downTo 90) {
                 println(k)
                 if (k == 98) continue@iLoop
             }
         }
-
     }
 
     var num: Int = 44
@@ -42,5 +41,4 @@ fun main(args: Array<String>) {
     }
 
     println(dNum)
-
 }

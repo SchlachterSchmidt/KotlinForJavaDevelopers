@@ -12,5 +12,4 @@ object PrinterCopyrightNotice {
 
     fun getTagLine() = "Best Printer Company"
     fun getCopyRightNotice() = "\u00A9 - ${getTagLine()}: $currentYear"
-
 }

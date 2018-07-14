@@ -20,8 +20,7 @@ abstract class Printer(val modelName: String) {
     abstract fun bestSellingPrice(): Double
 }
 
-
-open class LaserPrinter(modelName: String): Printer(modelName) {
+open class LaserPrinter(modelName: String) : Printer(modelName) {
     // class extending Printer using the default primary constructor (remember the ()'s)
 
     // add override keyword to override implementation of super class
@@ -33,14 +32,12 @@ open class LaserPrinter(modelName: String): Printer(modelName) {
     final override fun bestSellingPrice(): Double = 129.99
 }
 
-class MultiFunctionLaserPrinter(modelName: String): LaserPrinter(modelName) {
+class MultiFunctionLaserPrinter(modelName: String) : LaserPrinter(modelName) {
 
     override fun printModel() = println("the model of that MultiFunctinLasterPrinter is $modelName")
     // cannot override bestSellingPrive because it is final
     // override fun bestSellingPrice(): Double = 129.99
-
 }
-
 
 open class ClassWithoutPrimaryConstructor {
 
@@ -61,6 +58,4 @@ class SubclassOfClassWithoutPrimaryConstructor : ClassWithoutPrimaryConstructor 
     }
 }
 // data classes cannot be extended
-//open data class DataClassParent(val x: Int) {
-//
-//}
+// open data class DataClassParent(val x: Int) { }

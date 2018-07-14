@@ -22,16 +22,15 @@ fun main(args: Array<String>) {
             println(this@outer.toUpperCase())
         }
     }
-
 }
 
 // with converts the instance you are passing to a receiver object, and inside the lambda we don't need to refer to the receiver
 fun countTo100UsingWith() =
     with(StringBuilder()) {
-         for (i in 1..99) {
-             append(i)
-             append(", ")
-         }
+        for (i in 1..99) {
+            append(i)
+            append(", ")
+        }
         append("100")
     }.toString()
 
@@ -49,8 +48,8 @@ fun countTo100UsingApply() =
 // return in the lambda returns from both the lambda and the function if the calling funciton (forEach) is inlined
 // this is called a non-local return
 // we can use labels to modify this behaviour. Again, this can get sticky quickly like in this example right here
-fun findByLastName(employees: List<Employee>, key: String ) {
-    employees.forEach returnBlock@ {
+fun findByLastName(employees: List<Employee>, key: String) {
+    employees.forEach returnBlock@{
         if (it.lastName == key) {
             println("yes, there is an employee with the last name $key")
             return@returnBlock

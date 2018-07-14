@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     // default visibility is 'public' unlike java
     // no matching requirement for public class and file name either
     // we can also have private classes, which means it can only be accessed from the same file
-     val emp = Employee(firstName = "John")
+    val emp = Employee(firstName = "John")
     println(emp.firstName)
 
     val department = Department(name = "IT")
@@ -49,6 +49,3 @@ fun main(args: Array<String>) {
     val car4 = car3.copy(year = 2016)
     println(car4)
 }
-
-
-

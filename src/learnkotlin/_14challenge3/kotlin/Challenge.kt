@@ -62,4 +62,3 @@ class KotlinRoadBike(val tireWidth: Int, cadence: Int, speed: Int, gear: Int = 1
         println("The roadbike has a tire width of $tireWidth. ")
     }
 }
-

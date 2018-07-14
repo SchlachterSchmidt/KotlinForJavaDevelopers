@@ -10,7 +10,7 @@ fun main(args: Array<String>) {
     val someInstance = SomeClass.factoryUpperOrLower("Well hello there", false)
     println(someInstance.someString)
     val someOtherInstance = SomeClass.factoryJustAssign("welcome")
-    println(someOtherInstance.accessSomeVar() )
+    println(someOtherInstance.accessSomeVar())
 
     // with the private primary constructor, we cannot do this anymore
     // SomeClass("someString")
@@ -37,6 +37,4 @@ class SomeClass private constructor(val someString: String) {
             else return SomeClass(str.toUpperCase())
         }
     }
-
 }
-

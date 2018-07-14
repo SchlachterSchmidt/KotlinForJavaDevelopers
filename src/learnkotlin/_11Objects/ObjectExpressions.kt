@@ -1,6 +1,6 @@
 package learnkotlin._11Objects
 
- // Object Expressions are similar to annonymous classes in Java
+// Object Expressions are similar to annonymous classes in Java
 
 fun main(args: Array<String>) {
 
@@ -18,13 +18,12 @@ fun main(args: Array<String>) {
         }
     })
     println(nonFinalVar)
-
 }
 
 interface SomeInterface {
     fun mustImplement(num: Int): String
 }
 
-fun wantsSomeInterface(si: SomeInterface ) {
+fun wantsSomeInterface(si: SomeInterface) {
     println("printing from SomeInterfaces method: ${si.mustImplement(5)}")
 }

@@ -7,8 +7,7 @@ fun main(args: Array<String>) {
     // the java way
     if (true) {
         num = 50
-    }
-    else {
+    } else {
         num = 100
     }
 

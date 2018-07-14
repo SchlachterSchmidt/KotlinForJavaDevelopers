@@ -50,7 +50,6 @@ fun main(args: Array<String>) {
     onVacation = Dummyclass().isVacationTimeBoolean(vacationTime)
     println(onVacation)
 
-
     // the Any class is at the root of the class hierarchy
     val anything: Any
 
@@ -72,18 +71,13 @@ fun main(args: Array<String>) {
     println(longsTwo is Array<Long>)
     println(longsThree is Array<Long>)
 
-
-
-    val evenNumbers = Array(16) { i -> i * 2}
+    val evenNumbers = Array(16) { i -> i * 2 }
     for (number in evenNumbers) {
         println(number)
     }
 
     val lotsOfNumbers = Array(100000) { i -> i }
     val lotsOfZeros = Array(100) { 0 }
-
-
-
 
     var someOtherArray: Array<Int>
     someOtherArray = arrayOf(1, 2, 4)
@@ -94,16 +88,15 @@ fun main(args: Array<String>) {
     }
 
     val someArray: Array<Int>
-    someArray = Array(10) { i -> (i + 1) * 10}
+    someArray = Array(10) { i -> (i + 1) * 10 }
     // you can update the content of the array, but not the reference
     someArray[1] = 5000
-    for (number in someArray) {
-        println("\t${number}")
-    }
+    for (number in someArray)
+        println("\t$number")
 
     val mixedArray = arrayOf("one", 2, 3.0, 4L, "v")
     for (elem in mixedArray) {
-        println(elem )
+        println(elem)
     }
     println(mixedArray is Array<Any>)
 

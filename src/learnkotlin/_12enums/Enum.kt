@@ -1,6 +1,5 @@
 package learnkotlin._12enums
 
-
 fun main(args: Array<String>) {
 
     println(Department.ACCOUNTING.getDepartmentInfo())

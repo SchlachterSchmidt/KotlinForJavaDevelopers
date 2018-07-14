@@ -10,12 +10,12 @@ fun main(args: Array<String>) {
     var float3: Float? = -3684.234F
 
     // 3
-    val shortArray = shortArrayOf( 1, 2, 3, 4, 5 )
+    val shortArray = shortArrayOf(1, 2, 3, 4, 5)
     val shortArray2: Array<Short> = arrayOf(1, 2, 3, 4, 5)
 
     // 4
-    val nullableIntArray: Array<Int?> = Array(40)  {i  -> (i + 1) * 5}
-    val nullableIntArray2 = Array<Int?>(40)  {i  -> (i + 1) * 5}
+    val nullableIntArray: Array<Int?> = Array(40) { i -> (i + 1) * 5 }
+    val nullableIntArray2 = Array<Int?>(40) { i -> (i + 1) * 5 }
 
     // 5
     val charArray2 = charArrayOf('a', 'b', 'c')
@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
     val y: String = x?.toLowerCase() ?: "I give up"
 
     // 7
-    val z = x?.let {it.toLowerCase().replace("am", "am not")}
+    val z = x?.let { it.toLowerCase().replace("am", "am not") }
     println(z)
 
     // 8

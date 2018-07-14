@@ -1,7 +1,5 @@
 package learnkotlin._02declarations
 
-
-
 fun main(args: Array<String>) {
     val number = 25
     val number2: Int
@@ -36,23 +34,21 @@ fun main(args: Array<String>) {
     // check for referential equality:
     val employee6 = employee5
     println(employee3 === employee4) // false
-    println(employee6 === employee5 ) // true
+    println(employee6 === employee5) // true
 
     println(employee3 != employee4) // true
-    println(employee4 != employee5 ) // false
+    println(employee4 != employee5) // false
     println(employee3 !== employee4) // true
     println(employee6 !== employee5) // false
 
-
     // type checking and casting
     val something: Any = employee4
-    if(something is Employee) {
+    if (something is Employee) {
         // after a type check, kotlin will have figured out the type of 'something' already and we can refer
         // to the class members. Feature called 'smart casting'
-
         something.name
     }
-    if(something !is Employee) {
+    if (something !is Employee) {
         // something else
     }
 
@@ -73,7 +69,6 @@ fun main(args: Array<String>) {
     println("but this is part of the string: $employee1.id ")
 
     // raw string
-
     // val filePathString = "c:\asd" this is n ot working as the backslash is not escaped
     val filePathString = "c:\\asd\\asd" // need to escape the backslash
     val filePathRawString = """c:\asd\asd""" // or use a raw string
@@ -84,7 +79,7 @@ fun main(args: Array<String>) {
         *broken over many lines
         *but with trim margin it can be indented even though
         *it is aware of          whitespace
-    """.trimMargin("*") //if no trim character is supplied, | (pipe) is the default
+    """.trimMargin("*") // if no trim character is supplied, | (pipe) is the default
     println(longString)
 }
 

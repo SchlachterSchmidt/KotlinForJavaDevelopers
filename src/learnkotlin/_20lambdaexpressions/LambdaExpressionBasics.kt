@@ -4,12 +4,12 @@ fun main(args: Array<String>) {
 
     // lambdas are declared in curly braces and can be assigned to a variable
     // but other than in Java, we can execute them with a run-command:
-    run {println("i'm in a lambda")}
+    run { println("i'm in a lambda") }
 
     val employees = listOf(Employee("John", "Smith", 2010),
-       Employee("Joe", "Miller", 2005),
-       Employee("Jane", "Anderson", 2000),
-       Employee("Mike", "Ness", 2015)
+        Employee("Joe", "Miller", 2005),
+        Employee("Jane", "Anderson", 2000),
+        Employee("Mike", "Ness", 2015)
     )
 
     // minBy takes lambda to find lowest value
@@ -33,8 +33,8 @@ fun main(args: Array<String>) {
 
     // using run with a top level function
     run(::topLevel)
-
 }
+
 fun topLevel() = "i'm a top level function"
 
 fun useParameter(employees: List<Employee>, num: Int) {

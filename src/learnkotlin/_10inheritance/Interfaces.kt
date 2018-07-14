@@ -10,15 +10,13 @@ interface MyInterface {
         get() = number * 100
 }
 
-interface MySubInterface: MyInterface {
-
+interface MySubInterface : MyInterface {
     fun mySubinterfacesFunction(str: String): String
-
 }
 
 open class SuperClass(val sth: String)
 
-class SubClass: SuperClass("asd"), MySubInterface {
+class SubClass : SuperClass("asd"), MySubInterface {
 
     // we need to override the interface property here because it is not a concrete property in the interface
     override val number: Int = 25

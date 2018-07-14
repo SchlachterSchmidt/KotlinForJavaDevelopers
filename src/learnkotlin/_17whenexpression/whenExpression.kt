@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
     // we can test against expressions
     val num2 = 515
     when (num) {
-         num2 + 40 -> println("num is num2 plus 40")
+        num2 + 40 -> println("num is num2 plus 40")
     }
 
     // rather than doing type checking in a bunch of if-else-statements we can do it more concisely in the when with
@@ -75,7 +75,6 @@ fun main(args: Array<String>) {
     }
     println(str)
 
-
     // we can also use when without brackets
     val num3 = 10
     val num4 = 10
@@ -84,6 +83,4 @@ fun main(args: Array<String>) {
         num3 < num4 -> println("$num3 is less then $num4")
         else -> println("$num3 is equal to $num4")
     }
-
-
 }

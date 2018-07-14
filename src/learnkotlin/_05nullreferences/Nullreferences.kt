@@ -9,7 +9,7 @@ fun main(args: Array<String>) {
     // now the compiler complains if we do
     // strTwo.toUpperCase()
     // smart casting to the rescue
-    if (strTwo != null ) {
+    if (strTwo != null) {
         strTwo.toUpperCase()
     }
 
@@ -52,7 +52,6 @@ fun main(args: Array<String>) {
     // avoid chaining non-null assertions in this fashion. If an exception occurs we dont know which of the values was null
     val someCode = branch!!.address!!.country!!.code
 
-
     val nonNullString2: String? = "Definitely not null"
     // method printText expects String, not String? so this would not work
     // printText(nonNullString2)
@@ -66,13 +65,13 @@ fun main(args: Array<String>) {
 
     // and shorthand for the same thing
     // 'let' expects a lambda expression, and 'it' refers to the object that is calling 'let
-    nonNullString2?.let { printText(it)}
+    nonNullString2?.let { printText(it) }
 
     // '==' defers to the equal-method of nullString, but is null safe:
     println(nullString == nonNullString)
 
     // nullable arrays
-    val nullIntArray = arrayOfNulls<Int?>(5 )
+    val nullIntArray = arrayOfNulls<Int?>(5)
     for (i in nullIntArray) {
         println(i)
     }

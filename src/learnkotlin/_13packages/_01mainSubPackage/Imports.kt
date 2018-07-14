@@ -1,6 +1,5 @@
 package learnkotlin._13packages._01mainSubPackage
 
-
 // imports of interfaces and classes work same as in Java
 // but what about top level functions?
 // we just specify the name of the function just like we would with a class
@@ -18,7 +17,6 @@ import learnkotlin._12enums.Department.ACCOUNTING
 // we can also rename imports; and also upperFirstAndLast is an extension function ;)
 import learnkotlin._09functions.upperFirstAndLast as transform
 
-
 // again, private means visible from the same file only
 private fun privateTopLevelFun() = "i'm private to this file"
 
@@ -35,4 +33,3 @@ fun main(args: Array<String>) {
     println(privateTopLevelFun())
     println(internalTopLevelFun())
 }
-

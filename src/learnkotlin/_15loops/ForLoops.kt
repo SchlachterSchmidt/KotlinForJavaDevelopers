@@ -66,7 +66,7 @@ fun main(args: Array<String>) {
 
     // as a lambda
     seasons.forEach { println(it) }
-    seasons.forEachIndexed {index, value -> println("$index - $value")}
+    seasons.forEachIndexed { index, value -> println("$index - $value") }
 
     // named loops works with break and continue
     // this tends to get messy quickly though
@@ -81,6 +81,4 @@ fun main(args: Array<String>) {
             }
         }
     }
-
-
 }

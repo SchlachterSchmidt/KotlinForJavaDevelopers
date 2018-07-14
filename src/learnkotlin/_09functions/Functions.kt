@@ -7,9 +7,9 @@ fun main(args: Array<String>) {
     println(simplifiedLabelledMultiply(label = "Here's the result:", operand2 = 4, operand1 = 6))
     // this can be useful if you have functions with lots of params. Self documenting code!
     println(functionWithLotsOfArgs(height = 3,
-                                   width = 4,
-                                   depth = 5,
-                                   weight = 12))
+        width = 4,
+        depth = 5,
+        weight = 12))
 
     // class functions
     val emp1 = Employee("jane")
@@ -26,16 +26,14 @@ fun main(args: Array<String>) {
     // we can use this for example to
     val anotherEmployeeList = arrayOf(emp1, emp2, emp3)
     val fullEmployeeList = arrayOf(emp1, *employeeList, *anotherEmployeeList)
-    for(emp in fullEmployeeList) {
+    for (emp in fullEmployeeList) {
         println(emp)
     }
 }
 
 // default return type is Unit, unless specified.
 // this is redundant:
-fun redundantReturnType(args: Array<String>) : Unit {
-
-}
+// fun redundantReturnType(args: Array<String>): Unit { }
 
 // simple function with block body and default param. Function param defaults require the type
 fun labelledMultiply(operand1: Int, operand2: Int, label: String = "The answer is:"): String {
@@ -50,7 +48,7 @@ fun simplifiedLabelledMultiply(operand1: Int, operand2: Int, label: String) =
 // this isn't going to work bc return type mismatch, found Int, required Unit
 // fun notWorkingExample(): Unit = 3 * 4
 
-fun functionWithLotsOfArgs(height: Int, width: Int, depth: Int, weight: Int) : Int {
+fun functionWithLotsOfArgs(height: Int, width: Int, depth: Int, weight: Int): Int {
     return (height * width * depth * weight)
 }
 
@@ -63,8 +61,7 @@ fun printEmployeeNamesInUppercase(vararg employees: Employee) {
     // vararg should be the last argument in the function signature
     // otherwise we have to use names parameter in the function call to let the compiler know which params are part of
     // the vararg and which of the regular function params
-    for(employee in employees) {
+    for (employee in employees) {
         println(employee.uppercaseFirstName())
     }
 }
-

@@ -1,6 +1,6 @@
 package learnkotlin._08constructors
 
-class Employee constructor(firstName: String){
+class Employee constructor(firstName: String) {
     // primary constructor example
     val firstName: String
 
@@ -15,7 +15,7 @@ private class anotherEmployee constructor(firstName: String) {
     val firstName = firstName
 }
 
-class yetAnotherEmployee (val firstName: String) {
+class yetAnotherEmployee(val firstName: String) {
     // but even shorter
     // adding val keyword will create the class member and assign parameter
 }
@@ -24,7 +24,7 @@ class soManyEmployees protected constructor(val firstName: String) {
     // we only need the constructor keyword if we want to change visibility
 }
 
-class Department (val name: String) {
+class Department(val name: String) {
 
     var fullTime: Boolean = true
     // delegating name assignment to primary constructor
