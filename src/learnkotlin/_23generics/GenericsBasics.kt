@@ -17,7 +17,6 @@ fun main(args: Array<String>) {
         BigDecimal(0.1)
     )
     bdList.printAll()
-
 }
 
 fun <T> printCollection(collection: List<T>) {
