@@ -6,7 +6,7 @@ fun main(args: Array<String>) {
     val floats: List<Float> = listOf(1.23f, 2.34f, 3.45f, 4.56f, 5.99f)
 
     convertToInt(shorts)
-    convertToInt(floats )
+    convertToInt(floats)
 
     append(StringBuilder("String 1"), StringBuilder("String 2"))
 
@@ -40,7 +40,7 @@ fun main(args: Array<String>) {
 
 // as there is no guarantee that T has the toInt function, we can set an upper bound of accepting any sub class
 // of Number (which defines the toInt method for all numeric types)
-fun <T: Number> convertToInt(collection: List<T>) {
+fun <T : Number> convertToInt(collection: List<T>) {
     for (num in collection) {
         println("${num.toInt()}")
     }
@@ -59,6 +59,6 @@ fun <T> noUpperBound(collection: List<T>) {
 }
 
 // to accept only non-nmullable types, we do the same as with Number, just use Any:
-fun <T: Any> nonNullableTypesOnly(collection: List<T>) {
+fun <T : Any> nonNullableTypesOnly(collection: List<T>) {
     for (item in collection) println(item)
 }
