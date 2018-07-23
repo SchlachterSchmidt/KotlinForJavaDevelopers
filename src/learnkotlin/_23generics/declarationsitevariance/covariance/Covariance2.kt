@@ -1,4 +1,4 @@
-package learnkotlin._23generics
+package learnkotlin._23generics.declarationsitevariance.covariance
 
 fun main(args: Array<String>) {
     val garden: Garden<Rose> = Garden()
