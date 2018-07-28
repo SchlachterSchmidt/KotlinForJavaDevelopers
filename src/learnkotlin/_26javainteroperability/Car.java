@@ -16,11 +16,9 @@ public class Car {
         this.year = year;
     }
 
-    public String getColor() {
-        return color;
-    }
+    public @Nullable String getColor() { return color; }
 
-    public void setColor(@NotNull String color) {
+    public void setColor(@Nullable String color) {
         this.color = color;
     }
 
@@ -32,8 +30,12 @@ public class Car {
         this.model = model;
     }
 
-    public @Nullable int getYear() {
+    public @NotNull int getYear() {
         return year;
+    }
+
+    public void setYear(@NotNull int year) {
+        this.year = year;
     }
 
     @Override
