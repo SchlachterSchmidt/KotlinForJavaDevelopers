@@ -1,5 +1,7 @@
 package learnkotlin._26javainteroperability.kotlinfromjava;
 
+import java.io.IOException;
+
 public class CallKotlinFromJava {
 
     public static void main(String[] args) {
@@ -25,5 +27,32 @@ public class CallKotlinFromJava {
 
         // with the annotation @JvmField we can access properties directly bypassing the generated constructor
         System.out.println(car.year);
+
+        // to access the companion object we can use the Companion keyword
+        Car.Companion.carComp();
+        // or use the JvmStatic annotation, the compiler will compile two versions - an instance method and a static one
+        Car.staticCarComp ();
+        // for variables we have to annotate with @JvmField
+        System.out.println(Car.isAuto);
+
+        // to use objects we must use the single INSTANCE. Or annotate with @JvmStatic
+        SingletonCar.INSTANCE.doCarWhatACarDoes();
+
+        // constants do not need annotations
+        System.out.println(Car.constant);
+
+        // nothing stops us from passing null to a non-null type. An exception will be thrown:
+        // car.printMe(null);
+
+        // without the @Throws annotation, we cannot catch the exception
+        try {
+            car.throwIOException();
+        } catch (IOException e) {
+            System.out.print(e.getMessage());
+        }
+
+        // we can omit values in the function call if we annotate the kotlin function with @JvmOverloads, which will
+        // cause the compiler to generate every possible method signature, not just the one with all params required
+        car.defaultArgs("dsa");
     }
 }
